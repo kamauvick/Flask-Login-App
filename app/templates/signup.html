@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+
+{% block content%}
+{{super()}}
+{%if error %}
+<div class="alert alert-danger" role="alert">
+    {{error}}
+</div>
+{% endif %}
+<h2 class="text-center text-yellow">signup</h2>
+<div class="container">
+    <div class="card">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <form action="/signup" method="POST">
+                    <div class="form-group">
+                        <label>User Name</label>
+                        <input type="text" class="form-control" placeholder="User Name" name="username">
+                    </div>
+                    <div class="form-group">
+                        <label>Email address</label>
+                        <input type="email" class="form-control" placeholder="Enter email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" placeholder="Password" name="password">
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" class="form-control" placeholder="Confirm Password"
+                               name="confirmpassword">
+                    </div>
+                    <button type="submit" class="btn btn-info btn-sm">Sign Up</button>
+                </form>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</div>
+{% endblock%}

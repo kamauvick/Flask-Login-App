@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{super()}}
+<div class="container">
+    <div class="jumbotron">
+        hello user
+    </div>
+    <a href="/logout"><button class="btn btn-danger">Log Out</button></a>
+    <a href="/signup"><button class="btn btn-danger">Sign Up</button></a>
+</div>
+{% endblock %}
